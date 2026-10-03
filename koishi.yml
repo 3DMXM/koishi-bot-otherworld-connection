@@ -1,0 +1,168 @@
+plugins:
+  group:server:
+    server:7oj76r:
+      port: 5140
+      maxPort: 5149
+    ~server-satori:3pkdlw: {}
+    ~server-temp:wljwrv: {}
+  group:basic:
+    ~admin:li3gzx: {}
+    ~bind:st657a: {}
+    commands:bip5kx:
+      ai:
+        config:
+          hidden: true
+        aliases:
+          ai:
+            filter: false
+      plugin:
+        config:
+          hidden: true
+      status:
+        config:
+          hidden: true
+      timer:
+        config:
+          hidden: true
+      usage:
+        config:
+          hidden: true
+    help:2hwcim: {}
+    http:pcfnbl: {}
+    ~inspect:zyqru1: {}
+    locales:hxvxya: {}
+    proxy-agent:csxrqj: {}
+    rate-limit:0t3353: {}
+    telemetry:7o1bz0: {}
+  group:console:
+    actions:u86jt0: {}
+    analytics:luul98: {}
+    android:tu4czr:
+      $if: env.KOISHI_AGENT?.includes('Android')
+    auth:60gdvl:
+      admin:
+        password: '123456'
+    config:wt3xa1: {}
+    console:5qlwl7:
+      open: true
+    dataview:2c9lxs: {}
+    desktop:qmq53n:
+      $if: env.KOISHI_AGENT?.includes('Desktop')
+    explorer:lpck5v: {}
+    logger:54f66c: {}
+    insight:6rou4a: {}
+    market:r7gtvr:
+      search:
+        endpoint: https://registry.koishi.chat/index.json
+    notifier:7848km: {}
+    oobe:lgft6g: {}
+    sandbox:gj54pk: {}
+    status:vso27e: {}
+    theme-vanilla:h47txf: {}
+  group:storage:
+    ~database-mongo:6fi5xt:
+      database: koishi
+    ~database-mysql:1ugael:
+      database: koishi
+    ~database-postgres:mfelyh:
+      database: koishi
+    database-sqlite:2nria5:
+      path: data/koishi.db
+    assets-local:2oyp9b: {}
+  group:adapter:
+    ~adapter-dingtalk:qgo036: {}
+    ~adapter-discord:cwn3kk: {}
+    ~adapter-kook:q1cxmz: {}
+    ~adapter-lark:44dg2x: {}
+    ~adapter-line:4tpmto: {}
+    ~adapter-mail:sybcyz: {}
+    ~adapter-matrix:4kb4xr: {}
+    qq-bot:fx74mf:
+      secret: NfxGZtEZvIf3SrHh8a2VzTyTzW3bAjJu
+      type: public
+      id: '1905621081'
+      intents:
+        - GUILDS
+        - GUILD_MEMBERS
+        - GUILD_MESSAGES
+        - GUILD_MESSAGE_REACTIONS
+        - DIRECT_MESSAGES
+        - OPEN_FORUMS_EVENT
+        - AUDIO_OR_LIVE_CHANNEL_MEMBER
+        - GROUP_MEMBERS
+        - USER_MESSAGE
+        - INTERACTIONS
+        - MESSAGE_AUDIT
+        - FORUM_EVENT
+        - AUDIO_ACTION
+        - PUBLIC_GUILD_MESSAGES
+    ~adapter-qq:y7cw4v:
+      id: '1905621081'
+      secret: NfxGZtEZvIf3SrHh8a2VzTyTzW3bAjJu
+      type: public
+      intents:
+        - GUILDS
+        - GUILD_MEMBERS
+        - GUILD_MESSAGES
+        - GUILD_MESSAGE_REACTIONS
+        - DIRECT_MESSAGES
+        - OPEN_FORUMS_EVENT
+        - AUDIO_OR_LIVE_CHANNEL_MEMBER
+        - GROUP_MEMBERS
+        - USER_MESSAGE
+        - INTERACTIONS
+        - MESSAGE_AUDIT
+        - FORUM_EVENT
+        - AUDIO_ACTION
+        - PUBLIC_GUILD_MESSAGES
+      path: /qq-bot
+      gatewayUrl: wss://api.sgroup.qq.com/websocket
+      manualAcknowledge: true
+      protocol: webhook
+    ~adapter-satori:urds3m: {}
+    ~adapter-slack:4t0cav: {}
+    ~adapter-telegram:n1ibl6: {}
+    ~adapter-wechat-official:jykrkn: {}
+    ~adapter-wecom:gf7s9o: {}
+    ~adapter-whatsapp:uhkxlb: {}
+    ~adapter-zulip:99meun: {}
+  group:develop:
+    $if: env.NODE_ENV === 'development'
+    hmr:b9a4ro:
+      root: .
+  otherworld-connection:7vz3rp:
+    connection:
+      baseUrl: https://www.glosc.ai/v1
+      apiKey: sk-mKap3oN4xuMGRHM13rIVQfu5Q1JGgfF1ZYlBCJvBj4qtArhY
+      model: gpt-6-luna
+    image:
+      baseUrl: https://www.glosc.ai/v1
+      apiKey: sk-mKap3oN4xuMGRHM13rIVQfu5Q1JGgfF1ZYlBCJvBj4qtArhY
+      model: gpt-image-2.5
+      size: ''
+    game:
+      signKeys: 3
+      questKeys: 1
+      signGold: 20
+      questGold: 30
+      questExperience: 30
+      experienceBase: 100
+      experienceStep: 50
+      pointsPerLevel: 3
+      normalPrice: 100
+      legendaryPrice: 1000
+      statPrice: 5
+      sellRatio: 0.5
+      normal:
+        gold: 20
+        experience: 30
+        legendaryRate: 0.001
+      hard:
+        gold: 40
+        experience: 50
+        legendaryRate: 0.005
+      expert:
+        gold: 60
+        experience: 80
+        legendaryRate: 0.02
+      dailyKeys: 10
