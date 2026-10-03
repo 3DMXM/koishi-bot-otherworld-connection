@@ -62,12 +62,21 @@ jobs:
         if: ${{ matrix.target.platform == 'windows' }}
         run: choco install zip
 
+      - name: Set up Yarn
+        shell: bash
+        run: |
+          mkdir -p .yarn/releases
+          curl --fail --location --retry 3 \
+            --output .yarn/releases/yarn-4.5.3.cjs \
+            https://repo.yarnpkg.com/4.5.3/packages/yarnpkg-cli/bin/yarn.js
+          node .yarn/releases/yarn-4.5.3.cjs --version
+
       - name: Prepare
         run: bash .github/workflows/prepare.sh
 
       - name: Install dependencies
         run: |
-          yarn --no-immutable
+          node .yarn/releases/yarn-4.5.3.cjs install --no-immutable
 
       - name: Pack file
         run: bash .github/workflows/pack.sh
