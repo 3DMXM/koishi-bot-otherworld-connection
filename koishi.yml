@@ -133,11 +133,11 @@ plugins:
   otherworld-connection:7vz3rp:
     connection:
       baseUrl: https://www.glosc.ai/v1
-      apiKey: sk-mKap3oN4xuMGRHM13rIVQfu5Q1JGgfF1ZYlBCJvBj4qtArhY
+      apiKey: sk-rse8wYpi4v9yQVuj6zM2W8RGMXfWF1VKQOFJ6sUUk9oI0s3Y
       model: gpt-6-luna
     image:
       baseUrl: https://www.glosc.ai/v1
-      apiKey: sk-mKap3oN4xuMGRHM13rIVQfu5Q1JGgfF1ZYlBCJvBj4qtArhY
+      apiKey: sk-rse8wYpi4v9yQVuj6zM2W8RGMXfWF1VKQOFJ6sUUk9oI0s3Y
       model: gpt-image-2.5
       size: ''
     game:
